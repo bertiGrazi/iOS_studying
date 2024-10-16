@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         searchTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         searchTextField.leftViewMode = .always
         searchTextField.backgroundColor = .white
+        searchTextField.delegate = self
         searchTextField.translatesAutoresizingMaskIntoConstraints = false
         return searchTextField
     }()
@@ -82,6 +83,34 @@ class ViewController: UIViewController {
             print("Unknown error. Unable to get Location Authorization.")
             
         }
+    }
+    
+    private func findNearbyPlaces(by query: String) {
+        // clear all anotations
+        mapView.removeAnnotations(mapView.annotations)
+        
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = query
+        request.region = mapView.region
+        
+        let search = MKLocalSearch(request: request)
+        search.start { response, error in
+            guard let response = response, error == nil else { return }
+            print(response.mapItems)
+        }
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let text = textField.text ?? ""
+        if !text.isEmpty {
+            textField.resignFirstResponder()
+            
+            //find nearby places
+            findNearbyPlaces(by: text)
+        }
+        return true
     }
 }
 
