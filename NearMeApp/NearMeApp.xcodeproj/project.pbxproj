@@ -30,7 +30,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B1552E7C2CC0644400A24C36 /* Exceptions for "NearMeApp" folder in "NearMeApp" target */ = {
+		B1C78F032CC26D09006B8F14 /* Exceptions for "NearMeApp" folder in "NearMeApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -40,14 +40,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B1552E532CC0644300A24C36 /* NearMeApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B1552E7C2CC0644400A24C36 /* Exceptions for "NearMeApp" folder in "NearMeApp" target */,
-			);
-			path = NearMeApp;
-			sourceTree = "<group>";
-		};
 		B1552E6D2CC0644400A24C36 /* NearMeAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = NearMeAppTests;
@@ -56,6 +48,14 @@
 		B1552E772CC0644400A24C36 /* NearMeAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = NearMeAppUITests;
+			sourceTree = "<group>";
+		};
+		B1C78EFC2CC26D09006B8F14 /* NearMeApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B1C78F032CC26D09006B8F14 /* Exceptions for "NearMeApp" folder in "NearMeApp" target */,
+			);
+			path = NearMeApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -88,7 +88,7 @@
 		B1552E482CC0644300A24C36 = {
 			isa = PBXGroup;
 			children = (
-				B1552E532CC0644300A24C36 /* NearMeApp */,
+				B1C78EFC2CC26D09006B8F14 /* NearMeApp */,
 				B1552E6D2CC0644400A24C36 /* NearMeAppTests */,
 				B1552E772CC0644400A24C36 /* NearMeAppUITests */,
 				B1552E522CC0644300A24C36 /* Products */,
@@ -121,7 +121,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				B1552E532CC0644300A24C36 /* NearMeApp */,
+				B1C78EFC2CC26D09006B8F14 /* NearMeApp */,
 			);
 			name = NearMeApp;
 			packageProductDependencies = (
